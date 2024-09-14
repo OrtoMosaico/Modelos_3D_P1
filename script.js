@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modelName) {
         // Construir la URL del archivo basado en el nombre del modelo
-        const modelURL = `https://ortomosaico.github.io/Modelos_3D_P1/${modelName}.glb`;
+        const modelURL = `https://ortomosaico.github.io/Modelos_3D_P1/Models3D/${modelName}.glb`;
 
         // Obtener el elemento model-viewer
         const modelViewer = document.querySelector('#modelViewer');
