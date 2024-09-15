@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visor 3D de Modelos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Visor de Modelos 3D</h1>
-    <model-viewer
-      id="modelViewer"
-      alt="Modelo 3D"
-      auto-rotate
-      camera-controls
-      ar
-      background-color="#EFEFEF"
-      style="width: 100%; height: 500px;">
-    </model-viewer>
+    <header>
+        <h1>Visor de Modelos 3D</h1>
+    </header>
+    <main>
+        <section class="viewer-container">
+            <model-viewer
+    id="modelViewer"
+    src="https://firebasestorage.googleapis.com/v0/b/prueba-2-dc1d2.appspot.com/o/uploads%2F2.glb?alt=media&token=eddc5fa2-8d55-40aa-975d-b35bfd8aebbb"
+    alt="Modelo 3D"
+    auto-rotate
+    camera-controls
+    ar
+    background-color="#333"
+    style="width: 100%; height: 1000px;">
+        </section>
+    </main>
+    <footer>
+        <p>--</p>
+    </footer>
 </body>
 </html>
