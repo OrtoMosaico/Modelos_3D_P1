@@ -8,12 +8,13 @@ function getQueryParam(param) {
 
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener el parámetro de la URL que especifica el modelo
+    // Obtener los parámetros de la URL: nombre del modelo y token
     const modelName = getQueryParam('model');
+    const token = getQueryParam('token');
 
-    if (modelName) {
-        // Construir la URL del archivo basado en el nombre del modelo
-        const modelURL = `https://ortomosaico.github.io/Modelos_3D_P1/Models3D/${modelName}.glb`;
+    if (modelName && token) {
+        // Construir la URL del archivo en Firebase Storage basado en el nombre del modelo y el token
+        const modelURL = `https://firebasestorage.googleapis.com/v0/b/prueba-2-dc1d2.appspot.com/o/${encodeURIComponent(modelName)}?alt=media&token=${token}`;
 
         // Obtener el elemento model-viewer
         const modelViewer = document.querySelector('#modelViewer');
@@ -21,6 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Establecer el atributo src usando la URL construida
         modelViewer.src = modelURL;
     } else {
-        console.error('No se especificó el nombre del modelo en la URL.');
+        console.error('Faltan el nombre del modelo o el token en la URL.');
     }
 });
