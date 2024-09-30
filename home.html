@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <style>
+    /* Reset de márgenes y paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Encabezado (header) */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo de la empresa */
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Navegación superior */
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    /* Botones en la parte superior derecha */
+    .top-right-buttons a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .top-right-buttons a:hover {
+      background-color: #45a049;
+    }
+
+    /* Banner principal */
+    .banner {
+      position: relative;
+      background-image: url(''); /* Imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .banner .buttons {
+      margin-top: 20px;
+    }
+
+    .banner .buttons a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .banner .buttons a:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con logo y navegación -->
+  <header>
+    <div class="logo">Mi Empresa</div>
+    <nav>
+      <ul>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Soporte</a></li>
+        <li><a href="#">Información</a></li>
+        <li><a href="#">Comunidad</a></li>
+      </ul>
+    </nav>
+    <div class="top-right-buttons">
+      <a href="pagina-iniciar-sesion.html">Iniciar Sesión</a>
+      <a href="pagina-registrarse.html">Registrarse</a>
+    </div>
+  </header>
+
+  <!-- Sección de banner principal -->
+  <div class="banner">
+    <div>
+      <h1>Diseña y Crea lo que Quieras</h1>
+      <p>La plataforma que ayuda a planear, diseñar y operar tus proyectos.</p>
+      <div class="buttons">
+        <a href="#">Ver todos los productos</a>
+        <a href="#">Conocer más</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
