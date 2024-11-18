@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto sin logo</title>
-    <!-- Enlazar el archivo CSS -->
-    <link rel="stylesheet" href="VISUALESTOUR.CSS">
+    <title>Bloquear Logo</title>
+    <style>
+        /* Asegurarte de que cualquier elemento visual no se muestre */
+        img[src="https://virtualitour.es/logo.png"] {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
-    <!-- Contenido de tu página -->
+    <!-- Tu contenido -->
     <iframe src="https://virtualitour.es/tours/Cz2RTdQq9n7JIgVW4kFY" 
             width="100%" 
             height="600" 
@@ -16,7 +20,27 @@
             allowfullscreen>
     </iframe>
 
-    <!-- Enlazar el archivo JavaScript -->
-    <script src="TOURLAB.JS"></script>
+    <script>
+        // Interceptar solicitudes para evitar cargar el logo
+        const originalFetch = window.fetch;
+
+        // Sobrescribir la función fetch para bloquear la URL específica
+        window.fetch = async (...args) => {
+            const url = args[0];
+            if (url && url.includes("https://virtualitour.es/logo.png")) {
+                console.log("Bloqueada la carga de:", url);
+                return new Promise(() => {}); // Retornar una promesa vacía para bloquear
+            }
+            return originalFetch(...args);
+        };
+
+        // Interceptar solicitudes de imágenes en general
+        const observer = new MutationObserver(() => {
+            const images = document.querySelectorAll('img[src="https://virtualitour.es/logo.png"]');
+            images.forEach(img => img.remove());
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    </script>
 </body>
 </html>
