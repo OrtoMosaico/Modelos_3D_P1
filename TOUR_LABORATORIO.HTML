@@ -1,0 +1,10 @@
+<iframe id="myIframe" src="https://virtualitour.es/tours/Cz2RTdQq9n7JIgVW4kFY" width="100%" height="600"></iframe>
+<script>
+  const iframe = document.getElementById('myIframe');
+  iframe.onload = function() {
+    const iframeContent = iframe.contentWindow || iframe.contentDocument;
+    const styles = iframeContent.document.createElement('style');
+    styles.innerHTML = `.logo-class { display: none !important; }`;
+    iframeContent.document.head.appendChild(styles);
+  };
+</script>
