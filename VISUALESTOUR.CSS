@@ -1,0 +1,11 @@
+/* Ocultar elementos con la clase específica */
+.svelte-19kzapj {
+    display: none !important;
+}
+
+/* Puedes agregar estilos adicionales aquí */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
